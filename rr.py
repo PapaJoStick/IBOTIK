@@ -60,9 +60,3 @@ async def rr(ctx, opponent: discord.Member):
 				len_seq += 1 # прибавление кол-ва спусков
 				break # выход из цикла
 	print(f'сыграли в РР') # отчет в консоль
-    
-
-
-client = commands.Bot(command_prefix = '!', intents = Intents.all()) 
-
-client.remove_command('help')
