@@ -57,3 +57,19 @@ async def on_member_unban():
 	как и on_member_ban, пока в разработке
 	'''
 	print(f'кого-то разбанили') # отчет в консоль
+
+
+@ban.error # обарботка ошибки функции бана
+async def ban_error(ctx, error):
+	'''
+	функция обработки ошибок недостатка прав функции бана
+	аргумент ctx - контекст
+	аргумент error - код ошибки
+	class discord.Embed - класс discord.py, отвечающий за embed'ы (другой способ красивого вывода текста)
+	class discord.Color - стандартная библиотека цветов discord.py
+	class discord.Member - класс discord.py, отвечающий за взаимодействие с участниками сервера и их данными
+	'''
+	if isinstance(error, commands.MissingPermissions): # проверка наличия ошибки и подходит ли ошибка под искомую категорию
+		author = ctx.message.author # указание автора команды с ошибкой
+		emb = discord.Embed(title = f'{author.name}, у вас недостаточно прав', colour = discord.Color.red()) # создания Embed с инфой о причине ошибки
+		await ctx.channel.send(embed = emb) # оправка инфо о причине ошибки
