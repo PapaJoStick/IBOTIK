@@ -22,8 +22,3 @@ async def roll(ctx, number = 101):
 	result = random.choice(range(0,number+1)) # получение случайного числа от 0 до number ввключительно
 	await ctx.channel.send(f'{author.name} роллит (0, {number})... Выпадает {result}!') # отправка инфо о полученном числе
 	print(f'{author.name} зароллил') # отчет в консоль
-
-
-'''инициализация бота'''
-token = open('token.txt', 'r').readline() # открытие .txt файла, где лежит токен бота
-client.run(token) #инициализация бота

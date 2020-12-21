@@ -22,8 +22,3 @@ async def on_member_join(member):
 	role = discord.utils.get(member.guild.roles, id = 778259400644231168) # получаем id роли Newbee
 	await member.add_roles(role) #выдача роли 
 	print(f'{member.name} зашел на сервер') # отчет в консоль
-
-
-'''инициализация бота'''
-token = open('token.txt', 'r').readline() # открытие .txt файла, где лежит токен бота
-client.run(token) #инициализация бота

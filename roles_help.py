@@ -27,8 +27,3 @@ async def roles_help(ctx):
 	emb.add_field(name = 'Java', value = '"!role 4" - для получения роли Java и доступа к каналам (код - 4)', inline = False)
 	emb.add_field(name = 'Комбинации ролей', value = 'Например, "!roles 1234" - выдаст все доступные пока что роли', inline = False)
 	await roles_ch.send(embed = emb)
-
-
-'''инициализация бота'''
-token = open('token.txt', 'r').readline() # открытие .txt файла, где лежит токен бота
-client.run(token) #инициализация бота

@@ -36,8 +36,3 @@ async def roles(ctx, roles_wanted):
 			r = discord.utils.get(author.guild.roles, id = roles_possible[role][1]) # получаем роль ко коду из словаря соотвествий
 			await author.add_roles(r) #присваеваем роль
 	await ctx.channel.purge(limit = 1) # удаление команды из чата после выдачи
-
-
-'''инициализация бота'''
-token = open('token.txt', 'r').readline() # открытие .txt файла, где лежит токен бота
-client.run(token) #инициализация бота

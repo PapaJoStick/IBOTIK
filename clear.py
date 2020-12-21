@@ -45,7 +45,3 @@ async def clear_error(ctx, error):
 		author = ctx.message.author # указание автора команды с ошибкой
 		emb = discord.Embed(title = f'{author.mention}, у вас недостаточно прав', colour = discord.Color.red()) # создание поля Embed дл информирования о причине ошибки 
 		await ctx.channel.send(embed = emb) # отправка инфо о причине
-
-'''инициализация бота'''
-token = open('token.txt', 'r').readline() # открытие .txt файла, где лежит токен бота
-client.run(token) #инициализация бота
