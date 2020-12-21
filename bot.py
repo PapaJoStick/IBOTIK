@@ -4,6 +4,7 @@ from discord import Intents
 import random
 import time
 import kick
+import errors
 
 
 client = commands.Bot(command_prefix = '!', intents = Intents.all()) 
