@@ -1,8 +1,6 @@
 import discord
 from discord.ext import commands
 from discord import Intents
-import random
-import time
 client = commands.Bot(command_prefix = '!', intents = Intents.all()) # установка префикса для команд и намерений бота (то, с чем он может взаимодействовать), discord.Intents - класс,
 																	 # отвечающий за область действия бота (намерения)
 
