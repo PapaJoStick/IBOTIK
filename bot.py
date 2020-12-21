@@ -3,6 +3,9 @@ from discord.ext import commands
 from discord import Intents
 import random
 import time
+import kick
+
+
 client = commands.Bot(command_prefix = '!', intents = Intents.all()) 
 
 client.remove_command('help')
