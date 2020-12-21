@@ -8,7 +8,7 @@ import errors
 import ban
 import msuic
 import coinflip
-import RussianRoulette
+import rr
 import helptable
 import clear
 import roles_help

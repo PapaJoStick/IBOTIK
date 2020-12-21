@@ -5,6 +5,11 @@ import random
 import time
 
 
+client = commands.Bot(command_prefix = '!', intents = Intents.all()) 
+
+client.remove_command('help')
+
+
 @client.command(pass_context = True) # pass_context = True - разрешает команде использовать контекст
 async def rr(ctx, opponent: discord.Member):
 	'''
