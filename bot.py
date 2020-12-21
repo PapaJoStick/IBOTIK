@@ -23,5 +23,5 @@ client = commands.Bot(command_prefix = '!', intents = Intents.all())
 client.remove_command('help')
 
 
-token = open('token.txt', 'r').readline()
-client.run(token)
+# token = open('token.txt', 'r').readline()
+client.run('NzkwNjE3OTY2Mzc0NDIwNTMy.X-DOXA.8M7K2JO4bkIe4GzWcKu9ynT3SdE')
