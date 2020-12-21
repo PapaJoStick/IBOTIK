@@ -15,19 +15,3 @@ async def on_command_error(ctx, error):
 	'''
 	pass # ничего не делает, т к функция нужна лишь для инициализации ошибки на дальнейшую обработку
 	print(f'обрабатываю {error}') # отчет в консоль
-
-
-@clear.error # обработка ошибки функции очистки
-async def clear_error(ctx, error):
-	'''
-	функция обработки ошибок недостатка прав функции очистки
-	аргумент ctx - контекст
-	аргумент error - код ошибки
-	class discord.Embed - класс discord.py, отвечающий за embed'ы (другой способ красивого вывода текста)
-	class discrod.Color - стандартная библиотека цветов discord.py
-	class discord.Member - класс discord.py, отвечающий за взаимодействие с участниками сервера и их данными
-	'''
-	if isinstance(error, commands.MissingPermissions): # проверка наличия ошибки и подходит ли ошиба под искомую ктегорию
-		author = ctx.message.author # указание автора команды с ошибкой
-		emb = discord.Embed(title = f'{author.mention}, у вас недостаточно прав', colour = discord.Color.red()) # создание поля Embed дл информирования о причине ошибки 
-		await ctx.channel.send(embed = emb) # отправка инфо о причине

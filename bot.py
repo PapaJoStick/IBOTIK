@@ -7,6 +7,8 @@ import kick
 import errors
 import ban
 import msuic
+import coinflip
+
 
 
 client = commands.Bot(command_prefix = '!', intents = Intents.all()) 
