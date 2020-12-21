@@ -9,7 +9,13 @@ import ban
 import msuic
 import coinflip
 import RussianRoulette
-import help
+import helptable
+import clear
+import roles_help
+import roll
+import on_member_join
+import on_ready
+import roles
 
 client = commands.Bot(command_prefix = '!', intents = Intents.all()) 
 
