@@ -2,6 +2,8 @@ import discord
 from discord.ext import commands
 from discord import Intents
 
+client = commands.Bot(command_prefix = '!', intents = Intents.all()) 
+
 
 @client.command(pass_context = True) # pass_context = True - разрешает команде использовать контекст
 async def play(ctx):
@@ -53,8 +55,3 @@ async def stop(ctx):
 	await music_text_ch.send(embed = emb) # вывод оповещения об отключении
 	await voice.disconnect() # отключение от голосового канала
 	print('музыка остановилась') # отчет в консоль
-
-
-client = commands.Bot(command_prefix = '!', intents = Intents.all()) 
-
-client.remove_command('help')

@@ -1,10 +1,8 @@
 import discord
 from discord.ext import commands
 from discord import Intents
-client = commands.Bot(command_prefix = '!', intents = Intents.all()) # установка префикса для команд и намерений бота (то, с чем он может взаимодействовать), discord.Intents - класс,
-																	 # отвечающий за область действия бота (намерения)
+client = commands.Bot(command_prefix = '!', intents = Intents.all())
 
-client.remove_command('help')
 
 @client.command(pass_context = True) # pass_context = True - разрешает команде использовать контекст
 @commands.has_permissions (administrator = True) # разрешает выполнять команду только администраторам

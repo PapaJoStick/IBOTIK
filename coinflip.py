@@ -3,6 +3,8 @@ from discord.ext import commands
 from discord import Intents
 import random
 
+client = commands.Bot(command_prefix = '!', intents = Intents.all()) 
+
 
 @client.command(pass_context = True) # pass_context = True - разрешает команде использовать контекст
 async def coin(ctx, opponent: discord.Member):
@@ -24,7 +26,3 @@ async def coin(ctx, opponent: discord.Member):
 		await ctx.channel.send(f'Выиграл {opponent.mention}') # отправка сообщения о победе оппонента
 	print(f'подбросилась монетка') # отчет в консоль
 
-
-client = commands.Bot(command_prefix = '!', intents = Intents.all()) 
-
-client.remove_command('help')
